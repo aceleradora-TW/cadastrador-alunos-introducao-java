@@ -1,28 +1,26 @@
 package com.aceleradora.cadastrador.dominio;
 
 public class Aluna extends Pessoa {
-  private String numeroDeMatricula;
-  private String curso;
+  private String semestreTurma;
+  private String cadastroEstagio;
+  private Matricula matricula;
 
-  public Aluna(String nomeDaPessoa, String nascimento, String cadastroPessoaFisica, String numeroDeMatricula, String curso) {
+  public Aluna(String nomeDaPessoa, String nascimento, String cadastroPessoaFisica, String semestreTurma, String cadastroEstagio, Matricula matricula) {
     super(nomeDaPessoa, nascimento, cadastroPessoaFisica);
-    this.numeroDeMatricula = numeroDeMatricula;
-    this.curso = curso;
+    this.semestreTurma = semestreTurma;
+    this.cadastroEstagio = cadastroEstagio;
+    this.matricula = matricula;
   }
 
-  public String getNumeroDeMatricula() {
-    return numeroDeMatricula;
+  public String getSemestreTurma() {
+    return semestreTurma;
   }
 
-  public String getCurso() {
-    return curso;
+  public String getCadastroEstagio() {
+    return cadastroEstagio;
   }
 
-  public void setNumeroDeMatricula(String numeroDeMatricula) {
-    this.numeroDeMatricula = numeroDeMatricula;
-  }
-
-  public void setCurso(String curso) {
-    this.curso = curso;
+  public Matricula getMatricula() {
+    return matricula;
   }
 }
